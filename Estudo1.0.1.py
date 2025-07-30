@@ -1,107 +1,65 @@
-'''
-Print e um nome de função, funções servem para gerar um efeito (Exemplo: enviar uma mensagem no terminal, criar um arquivo, tocar um som etc..)
-avaliar um valor (por exemplo, a raiz quadrada de um valor ou o comprimento de um determinado texto) e retorná-lo como resultado da função; é isso que torna as funções do Python parentes de conceitos matemáticos.
-
-ma função em programação pode ter:
-
-    Um efeito (como exibir algo na tela),
-
-    Um resultado (valor retornado),
-
-    E argumentos (valores fornecidos para ela funcionar).
-'''
-
-
-print('Olá Mundo!')
-
-'''
-Python não permite o uso de mais de uma instrução na mesma linha exemplo:
-
-print("Exemplo") print("Outro Exemplo")
-
-A Maneira corrta de se fazer isso seria:
-
-print("Exemplo")
-print("Outro exemplo")
-
-Ou usando o /n mostrado abaixo
-'''
-print("Exemplo\nOutro exemplo\n")
-
-'''
-O Python sempre executaria de cima para baixo da esquerda para direita e nunca esquecera uma função mesmo que vazia exemplo abaixo:
-
-'''
-print("Exemplo")
-print("")
-print("Outro exemplo")
-
-
-'''
-O que são argumentos de palavra-chave?
-
-São nomes específicos que você passa para funções, junto com um valor, para modificar seu comportamento.
-Na função print(), os mais usados são:
-
-    end: o que aparece no final da linha.
-
-    sep: o que aparece entre os valores impressos.
-
-'''
-print("Olá", "mundo", sep="-", end="!")
-
-'''
-Explicação:
-
-    sep="-" → o separador entre os valores é um hífen.
-
-    end="!" → a linha termina com um ponto de exclamação, em vez da quebra de linha (\n).
-
-Outros exemplos:
-'''
-
-print("Meu nome é", end=" ")
-print("Monty Python.\n")
-
-print("Meu", "nome", "é", "Monty", "Python.", sep="-") 
-
-print("\nMeu", "nome", "é", sep="_",end=">>>")
-print("Monty Python.") 
-
-'''
-Regras importantes:
-
-    Os argumentos sep e end devem vir depois dos valores normais (posicionais) da função.
-
-    O valor pode ser qualquer string, inclusive vazia ("").
-
-    A função print() por padrão usa sep=" " e end="\n" (espaço como separador e nova linha ao final).
-'''
-
-print(" ____________________"*2)
-print(" |                  |"*2)
-print(" |                  |"*2)
-print(" |                  |"*2)
-print(" |                  |"*2)
-print(" |                  |"*2)
-print(" ____________________"*2)
-
 """
-Resumo – Função print() e argumentos em Python
+INTRODUÇÃO À FUNÇÃO print() EM PYTHON
 
-1. A função print() é interna do Python e exibe mensagens no console.
-2. Funções incorporadas (como print(), len(), type()) estão sempre disponíveis.
-3. Para chamar uma função, use seu nome seguido de parênteses:
-   Ex: print("Olá", "mundo") – argumentos separados por vírgula.
-   Um print() vazio imprime uma linha em branco.
-4. Strings em Python podem usar aspas simples ('') ou duplas ("").
-5. Programas são compostos por instruções, como comandos de exibição com print().
-6. A barra invertida (\) indica caracteres especiais, como \n (nova linha).
-7. Argumentos posicionais têm significado pela ordem em que aparecem.
-8. Argumentos de palavra-chave usam nomes explícitos, como end= ou sep=.
-9. Na função print(), use:
-   - sep="..." para definir o separador entre valores. Ex: sep="-"
-   - end="..." para definir o que imprimir no final. Ex: end=">>>"
+Seu primeiro programa:
+• O primeiro programa em Python costuma ser: print("Olá, Mundo!")
+• Elementos: nome da função `print`, parênteses, aspas e o texto a ser impresso.
+• Esse código deve ser executado no console ou em um arquivo `.py`.
+
+A função print():
+• `print()` é uma função incorporada ao Python, usada para exibir dados no console.
+• Funções podem causar efeitos (como mostrar algo na tela) ou retornar valores.
+• `print()` causa um efeito (imprimir), mas **não retorna valores úteis**.
+
+Argumentos de função:
+• As funções Python podem ter zero, um ou mais argumentos.
+• Os argumentos são colocados entre parênteses.
+• No caso do `print()`, seu argumento é uma **string** (texto entre aspas).
+
+Chamada de função:
+• Uma chamada de função tem o formato: `nome_da_função(argumento)`.
+• O Python:
+  1. Verifica se o nome da função existe.
+  2. Verifica se os argumentos são válidos.
+  3. Executa a função.
+  4. Volta para continuar o código após a execução da função.
+
+Efeitos, argumentos e retorno do print():
+• Efeito: mostra o que for passado como argumento.
+• Aceita praticamente qualquer tipo de argumento (string, número, booleano, etc).
+• Retorno: `None` (não retorna valor útil).
+
+Instruções:
+• Cada linha em Python deve conter **apenas uma instrução**.
+• Várias chamadas de `print()` mostram várias linhas no console.
+• Chamadas vazias como `print()` geram uma **linha em branco**.
+
+Escape e nova linha (\n):
+• `\n` é um caractere especial que **cria uma nova linha** dentro da string.
+• A barra invertida (`\`) inicia uma sequência de escape.
+• Para exibir uma barra invertida literal, use `\\`.
+
+Vários argumentos no print():
+• Ex: `print("Olá", "Python")` — múltiplos argumentos são separados por vírgulas.
+• O `print()` insere automaticamente **espaços entre os argumentos**.
+
+Argumentos posicionais:
+• A ordem dos argumentos importa.
+• Exemplo: `print("A", "B")` imprime A antes de B.
+
+Argumentos de palavra-chave:
+• `print()` aceita dois argumentos especiais:
+  - `sep="..."` → muda o separador entre os argumentos (padrão é espaço).
+  - `end="..."` → muda o que aparece no fim da impressão (padrão é nova linha).
+• Ex: 
+    print("A", "B", sep="-", end="!") → saída: A-B!
+• Pode-se usar ambos juntos, respeitando a ordem: argumentos posicionais primeiro, depois os nomeados.
+
+RESUMO GERAL:
+• `print()` → função interna usada para mostrar mensagens no console.
+• Funções internas não precisam ser importadas.
+• `print()` pode receber múltiplos argumentos e formatá-los com `sep` e `end`.
+• Strings são delimitadas por "aspas duplas" ou 'aspas simples'.
+• Caracteres de escape como `\n` produzem efeitos especiais nas strings.
+• Instruções são comandos executados linha a linha.
 """
-
-
